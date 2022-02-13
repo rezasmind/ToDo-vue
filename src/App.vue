@@ -34,7 +34,7 @@ export default {
     const todos = ref(todosData)
     function addTodo() {
       if (newTodo.value) {
-        todosData.value.push({
+        todos.value.push({
           done: false,
           content: newTodo.value
         })
@@ -51,6 +51,19 @@ export default {
       addTodo,
       doneToDo
     }
+  },
+  mounted () {
+    if (localStorage.getItem('todos')) this.todos = JSON.parse(localStorage.getItem('todos'));
+  },
+  watch: {
+      // watch todos change
+      todos: {
+          handler () {
+              localStorage.setItem('todos', JSON.stringify(this.todos));
+          },
+          deep: true
+    }
+
   }
 }
 </script>
