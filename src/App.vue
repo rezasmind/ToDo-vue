@@ -70,21 +70,30 @@ export default {
 
 <style>
 body {
-  background: #2c3e50;
+  background: #41B883;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+  background: #fff;
+  border-radius: 12px;
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 0px ;
   display: flex;
   justify-content: center;
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: white;
-  margin-top: 60px;
+  color: black;
+  }
+
+ul {
+  padding: 0;
 }
 
 .done {
@@ -98,28 +107,36 @@ form input {
   border: none;
   border-bottom: 1px solid #ccc;
   background: none;
-  color: white;
+  color: black;
 }
 
 form input::placeholder {
-  color: #ccc;
+  color: black;
   opacity: 0.8;
+}
+
+form input:focus {
+  border-bottom: 1px solid #41B883;
 }
 
 form button {
   background: none;
   border: 1px solid #ccc;
-  color: white;
+  color: black;
   font-size: 16px;
   margin: 0px 5px;
   border-radius: 7px;
   padding: 5px 10px;
   cursor: pointer;
+  transition: ease-in-out 250ms;
 }
 
 form button:hover {
-  background:white;
-  color: #2c3e50;
+  background: #41B883;
+  color: white;
+  border: 1px solid #41B883;
+  transition: 25ms ease-in-out;
+
 }
 
 li {
@@ -131,6 +148,14 @@ li {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 10px;
+  transition: 250ms ease-in-out;
+}
+
+li:hover {
+  background: #41B883;
+  color: white;
+  border: 1px solid #41B883;
+
 }
 
 .lidone {
