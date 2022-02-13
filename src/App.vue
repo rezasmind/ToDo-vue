@@ -56,8 +56,7 @@ export default {
     if (localStorage.getItem('todos')) this.todos = JSON.parse(localStorage.getItem('todos'));
   },
   watch: {
-      // watch todos change
-      todos: {
+          todos: {
           handler () {
               localStorage.setItem('todos', JSON.stringify(this.todos));
           },
